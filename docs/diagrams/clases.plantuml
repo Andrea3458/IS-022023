@@ -1,0 +1,39 @@
+@startuml clases
+
+class Equipo {
+    +nombre
+    +registro
+}
+
+class Persona {
+   +telefono
+   +nombre
+   +direccion
+}
+
+class Jugador {
+   +numero
+   +posicion
+}
+
+class Entrenador {
+    +exp
+    +acreditacion
+}
+
+class Capitan
+
+class Juego {
+   +localidad
+   +puntuacion
+}
+
+Persona <|-- Jugador : es
+Persona <|-- Entrenador : es
+Jugador <|-- Capitan : es
+
+Equipo "1" o--"6...20" Jugador : tiene
+Equipo -- Juego : Compite
+Equipo "1...*" o-- "1" Entrenador : entrena
+
+@enduml

@@ -1,0 +1,92 @@
+@startuml objetos
+
+object Juego {
+  localidad = "Santiago"
+  puntuacion = "3-2"
+}
+
+object EquipoVenezuela {
+  nombre = "Venezuela"
+  registro = "VEN123"
+}
+
+object EquipoColombia {
+  nombre = "Colombia"
+  registro = "COL456"
+}
+
+object EntrenadorV {
+  nombre = "Juan Perez"
+  telefono = "111111111"
+  direccion = "Caracas"
+  experiencia = 10
+  acreditacion = "III"
+}
+
+object EntrenadorC {
+  nombre = "Maria Gomez"
+  telefono = "222222222"
+  direccion = "Bogotá"
+  experiencia = 8
+  acreditacion = "II"
+}
+
+object Jugador1 {
+  nombre = "Pedro Martinez"
+  telefono = "999999999"
+  direccion = "Caracas"
+  numero = 7
+  posicion = "Atacante"
+}
+
+object Jugador2 {
+  nombre = "Luis Rodriguez"
+  telefono = "888888888"
+  direccion = "Maracaibo"
+  numero = 10
+  posicion = "Defensa"
+}
+
+object CapitanV {
+  nombre = "Carlos Lopez"
+  telefono = "777777777"
+  direccion = "Valencia"
+  numero = 1
+  posicion = "Central"
+}
+
+object Jugador3 {
+  nombre = "Andres Suarez"
+  telefono = "666666666"
+  direccion = "Bogotá"
+  numero = 5
+  posicion = "Atacante"
+}
+
+object Jugador4 {
+  nombre = "Felipe Torres"
+  telefono = "555555555"
+  direccion = "Medellín"
+  numero = 8
+  posicion = "Defensa"
+}
+
+object CapitanC {
+  nombre = "Javier Diaz"
+  telefono = "444444444"
+  direccion = "Cali"
+  numero = 2
+  posicion = "Central"
+}
+Juego -- EquipoVenezuela
+Juego -- EquipoColombia
+EquipoVenezuela o-- EntrenadorV
+EquipoVenezuela o-- Jugador1 
+EquipoVenezuela o-- Jugador2 
+EquipoVenezuela o-- CapitanV 
+EquipoColombia o-- EntrenadorC
+EquipoColombia o-- Jugador3 
+EquipoColombia o-- Jugador4 
+EquipoColombia o-- CapitanC
+
+@enduml
